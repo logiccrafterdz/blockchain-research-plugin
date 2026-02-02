@@ -1,12 +1,11 @@
 # Command: /blockchain-research:extend-erc6551
 
-Use when proposing an ERC-6551-compatible extension for behavioral proofs.
+Orchestrates ERC-6551 extension design using security-review-erc6551 skill waypoints.
 
-Steps:
-1. Require: the specific behavior or invariant to be enforced (e.g., "agent must execute X before Y under condition Z").
-2. Output:
-   - Extension interface (new functions/events; avoid breaking changes).
-   - How it composes with standard ERC-6551 flows.
-   - Security implications and new attack surfaces.
-   - Migration path or compatibility notes for existing token-bound accounts.
-3. Emphasize composability over replacement.
+Execution flow:
+1. Require precise behavior invariant: "What MUST be enforced? (e.g., X before Y)"
+2. Guide through waypoints 01→02→03 to establish security boundaries
+3. Only after waypoint 03: Propose extension interface
+4. Final output: Composable extension spec with migration path
+
+Critical rule: NEVER propose interface before ownership/attribution boundary is clarified (waypoint 01).

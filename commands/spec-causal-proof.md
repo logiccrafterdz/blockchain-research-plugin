@@ -1,12 +1,11 @@
 # Command: /blockchain-research:spec-causal-proof
 
-Use when designing a new causal proof or behavioral attestation scheme.
+Orchestrates causal proof design using causal-proof-design skill waypoints.
 
-Steps:
-1. Ask the user for: event type, ordering constraints, and verification context (on-chain, off-chain, or hybrid).
-2. Produce a spec with:
-   - Data structure (tree layout, node contents, ordering field).
-   - Ingestion protocol (how events enter the stream and are committed).
-   - Verification function signature and pseudocode.
-   - 2–3 minimal test cases (valid sequence, invalid reordering, invalid omission).
-3. Explicitly call out trust assumptions (sequencers, oracles, signers).
+Execution flow:
+1. Determine verification context: "On-chain only, off-chain only, or hybrid?"
+2. Guide through waypoints 01→02→03 (rapid) or full 5-waypoint flow (deep)
+3. After waypoint 04 (test vectors): Generate minimal reproducible example
+4. Final output: Complete spec with data structures + verification pseudocode
+
+Critical rule: Waypoint 02 (verification interface) MUST be complete before discussing test vectors.

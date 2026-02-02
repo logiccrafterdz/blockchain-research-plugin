@@ -1,11 +1,11 @@
 # Command: /blockchain-research:audit-behavior-gap
 
-Use to formalize an unaddressed behavior-auditing problem.
+Orchestrates a structured gap analysis using the research-gap-analysis skill waypoints.
 
-Steps:
-1. Ask which existing standard or pattern is being extended (e.g., ERC-6551, account abstraction, SBTs).
-2. Produce a three-part analysis:
-   - What the current standard provides.
-   - The precise behavior it cannot attest or constrain.
-   - Why common workarounds are insufficient (with concrete scenarios).
-3. Propose a minimal extension scope and defer non-essential features.
+Execution flow:
+1. Determine mode: "Rapid analysis or deep specification?" 
+2. If rapid: Guide through waypoints 01→02→03 only
+3. If deep: Guide through all 5 waypoints with strict sequencing
+4. After completion: Output consolidated gap analysis report referencing all waypoints
+
+Critical rule: NEVER allow skipping waypoints. Enforce sequential progression.

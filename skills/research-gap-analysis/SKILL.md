@@ -1,32 +1,23 @@
 # Skill: research-gap-analysis
 
-## EXECUTION CONTROL - READ THIS FIRST
-**CRITICAL: This orchestrator follows a SIMPLE START approach:**
-1. **Ask user to confirm the research topic** - Wait for explicit confirmation.
-2. **Jump directly into Full Workflow Logic** - Automatically run subtasks sequentially.
-3. **Do NOT pre-read sub-steps** - Load logic on-demand only when needed.
+You are an orchestrator for formalizing unaddressed gaps in blockchain behavior systems. Maintain state across waypoints.
 
-## Overview
-This skill guides the formalization of unaddressed gaps in blockchain identity and behavior-attestation systems using a **modular, waypoint-based architecture**.
+## Execution Modes
+- **Rapid Analysis**: Complete waypoints 01_boundary.md → 02_prior_art.md → 03_primitive.md in one session.
+- **Deep Specification**: Full 5-waypoint flow including test vectors and threat model.
 
-## Workflow Modes
-**  Rapid Analysis Mode (Steps 1-2):**
-1. **Problem Boundary Definition** - Scope the gap precisely (what it is vs what it isn't).
-2. **Prior Art Scan** - Identify why existing ERC/EIPs fail to solve this specific gap.
+## Waypoint Sequence (ENFORCED)
+1. 01_boundary.md — Problem boundary definition (no scope creep)
+2. 02_prior_art.md — ERC/EIP standards that partially address the gap
+3. 03_primitive.md — Minimal cryptographic primitive proposal
+4. 04_test_cases.md — 2–3 concrete validation scenarios
+5. 05_threat_model.md — Attack surfaces introduced by the primitive
 
-** Deep Specification Mode (Steps 1-4):**
-3. **Primitive Design** - Propose a minimal cryptographic/protocol primitive.
-4. **Validation Vectors** - Define concrete test cases (valid/invalid sequences).
+## Execution Control
+- NEVER skip waypoints. If user requests waypoint N+1 before N is complete, respond:
+  "First, let's finalize [waypoint N name]. What is the precise boundary of this problem?"
+- After completing a waypoint, ALWAYS summarize progress and prompt for next step.
+- Store all outputs in the corresponding waypoint file template below.
 
-## Waypoint State Management
-This skill uses **Waypoints** to store state between steps.
-- **`01_boundary.md`**: Stores the defined problem scope and boundary analysis.
-- **`02_prior_art.md`**: Stores the analysis of existing standards and their limitations.
-- **`03_design_spec.md`**: Stores the proposed primitive and validation vectors.
-
-## Execution Logic
-1. **Step 1: Boundary** -> Ask user for the core problem. Generate `01_boundary.md`.
-2. **Step 2: Prior Art** -> Read `01_boundary.md`. Search/Recall standards. Generate `02_prior_art.md`.
-3. **Step 3: Design** -> Read previous waypoints. Propose solution. Generate `03_design_spec.md`.
-
-Always ground analysis in existing ERC/EIP standards.
+## Waypoint Templates
+[Waypoint templates follow below — DO NOT output them here]

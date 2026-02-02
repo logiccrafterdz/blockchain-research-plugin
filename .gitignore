@@ -4,3 +4,8 @@ __pycache__/
 *.pyc
 node_modules/
 .DS_Store
+skills/*/01_*.md
+skills/*/02_*.md
+skills/*/03_*.md
+skills/*/04_*.md
+skills/*/05_*.md

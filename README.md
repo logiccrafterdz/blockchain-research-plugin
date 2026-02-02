@@ -1,31 +1,30 @@
 # blockchain-research-plugin
 
-Claude plugin for applied blockchain research: formalizing behavior gaps, designing causal proofs, and extending standards like ERC-6551.
+Enterprise-grade Claude plugin for auditable behavior research using waypoint state management.
 
-## Philosophy
+## Architecture
 
-- **Minimal scope**: Only research workflows: no generic task management.
-- **Standards-first**: Always ground proposals in existing ERCs/EIPs before extending.
-- **Atomic proofs**: Causal claims must be cryptographically verifiable, not just logged.
+- **Orchestrator Skills**: Each skill is a stateful workflow (not a flat prompt)
+- **Waypoint Persistence**: Analysis state saved across conversations via markdown templates
+- **Execution Control**: Strict sequencing prevents logical gaps in research
+- **Dual Modes**: Rapid analysis (3 waypoints) vs Deep specification (5 waypoints)
 
-## Workflows supported
+## Skills
 
-- `/blockchain-research:audit-behavior-gap` - Formalize unaddressed behavior attestation problems.
-- `/blockchain-research:spec-causal-proof` - Design nonce-ordered causal structures with test vectors.
-- `/blockchain-research:extend-erc6551` - Propose composable extensions without breaking compatibility.
+- `research-gap-analysis` — Formalize unaddressed behavior gaps with prior art grounding
+- `causal-proof-design` — Design nonce-ordered structures with failure mode analysis
+- `security-review-erc6551` — Review extensions with ownership/attribution boundary enforcement
 
-## Install (local development)
+## Commands
+
+- `/blockchain-research:audit-behavior-gap` — Structured gap analysis workflow
+- `/blockchain-research:spec-causal-proof` — Causal proof design with test vectors
+- `/blockchain-research:extend-erc6551` — Composable ERC-6551 extensions
+
+## Install
 
 ```bash
-git clone https://github.com/LogicCrafterDz/blockchain-research-plugin.git
-cd blockchain-research-plugin
 claude plugins add .
 ```
 
-> Requires `GITHUB_TOKEN` in environment for GitHub MCP integration.
-
-## Architecture notes
-
-- No external APIs beyond GitHub MCP.
-- Skills and commands are stateless — no database or persistent storage required.
-- Designed for longevity: independent of Comet/Antigravity changes.
+> Requires `GITHUB_TOKEN` for GitHub MCP integration. Waypoint files are gitignored by default — commit only SKILL.md for collaboration.
