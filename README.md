@@ -1,6 +1,7 @@
 # blockchain-research-plugin
 
 Enterprise-grade Claude plugin for auditable behavior research using waypoint state management.
+Designed for protocol designers working on behavior-attested systems (e.g. ERC-6551 extensions, causal proofs).
 
 ## Architecture
 
@@ -24,6 +25,8 @@ Enterprise-grade Claude plugin for auditable behavior research using waypoint st
 ## Install
 
 ```bash
+git clone https://github.com/LogicCrafterDz/blockchain-research-plugin.git
+cd blockchain-research-plugin
 claude plugins add .
 ```
 
