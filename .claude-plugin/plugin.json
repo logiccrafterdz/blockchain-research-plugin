@@ -1,0 +1,9 @@
+{
+  "name": "blockchain-research",
+  "version": "0.1.0",
+  "description": "Claude plugin for auditable behavior research: causal proofs, ERC-6551 extensions, and protocol specs.",
+  "entrypoints": {
+    "skills": ["skills"],
+    "commands": ["commands"]
+  }
+}

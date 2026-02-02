@@ -1,0 +1,12 @@
+{
+    "servers": {
+        "github": {
+            "type": "python",
+            "command": "github-mcp",
+            "args": [],
+            "env": {
+                "GITHUB_TOKEN": "{{env.GITHUB_TOKEN}}"
+            }
+        }
+    }
+}

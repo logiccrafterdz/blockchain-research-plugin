@@ -1,0 +1,3 @@
+# Skill: research-gap-analysis
+
+Clarify limitations of current standards by determining what specific problems they solve and what critical gaps remain unaddressed in existing blockchain identity and behavior systems. Define a precise problem boundary to maintain focus and prevent scope creep during the research phase. Propose a minimal cryptographic or protocol primitive specifically designed to bridge the identified gap. List two to three concrete test cases that can be used to validate the proposed solution effectively and objectively. Always ground analysis in existing ERC/EIP standards and prior art before proposing new mechanisms. This ensures consistency with the broader ecosystem and avoids redundant solutions for already addressed architectural challenges.
