@@ -4,15 +4,15 @@ Claude plugin for applied blockchain research: formalizing behavior gaps, design
 
 ## Philosophy
 
-- **Minimal scope**: Only research workflows — no generic task management.
+- **Minimal scope**: Only research workflows: no generic task management.
 - **Standards-first**: Always ground proposals in existing ERCs/EIPs before extending.
 - **Atomic proofs**: Causal claims must be cryptographically verifiable, not just logged.
 
 ## Workflows supported
 
-- `/blockchain-research:audit-behavior-gap` — Formalize unaddressed behavior attestation problems.
-- `/blockchain-research:spec-causal-proof` — Design nonce-ordered causal structures with test vectors.
-- `/blockchain-research:extend-erc6551` — Propose composable extensions without breaking compatibility.
+- `/blockchain-research:audit-behavior-gap` - Formalize unaddressed behavior attestation problems.
+- `/blockchain-research:spec-causal-proof` - Design nonce-ordered causal structures with test vectors.
+- `/blockchain-research:extend-erc6551` - Propose composable extensions without breaking compatibility.
 
 ## Install (local development)
 
